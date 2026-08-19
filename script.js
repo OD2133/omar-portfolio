@@ -8,6 +8,12 @@
 
 const projects = [
   {
+    title: "Selected Reel 01",
+    category: "Reels",
+    video: "videos/reel-01.mp4",
+    poster: "",
+  },
+  {
     title: "Real Estate Reel",
     category: "Real Estate",
     video: "",
@@ -22,12 +28,6 @@ const projects = [
   {
     title: "Commercial Edit",
     category: "Commercial",
-    video: "",
-    poster: "",
-  },
-  {
-    title: "Personal Brand",
-    category: "Personal Brand",
     video: "",
     poster: "",
   },
@@ -91,6 +91,25 @@ function renderProjects(category = "All") {
   });
 }
 
+
+const autoplayObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target.querySelector("video");
+    if (!video) return;
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+      video.muted = true;
+      video.playsInline = true;
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: [0, 0.55, 1] });
+
+function observeAutoplayVideos() {
+  document.querySelectorAll(".project").forEach(card => autoplayObserver.observe(card));
+}
+
 function openProject(index) {
   const p = projects[index];
   if (!p.video) return;
@@ -114,3 +133,4 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal()
 
 renderFilters();
 renderProjects();
+observeAutoplayVideos();
