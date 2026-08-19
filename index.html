@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omar Diaa — Video Editor specializing in Reels and short-form content." />
+  <title>Omar Diaa — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <a class="logo" href="#home">OD<span>.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's work</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">VIDEO EDITOR · REELS · SHORT-FORM</p>
+        <h1>I turn raw footage into <em>content people watch.</em></h1>
+        <p class="hero-text">
+          I'm Omar Diaa, a video editor focused on Reels, social content,
+          motion graphics and fast-paced storytelling.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View my work <span>↘</span></a>
+          <a class="button ghost" href="#contact">Let's talk</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="play-ring">▶</div>
+        <p>SELECTED<br>WORK</p>
+        <span>2026</span>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 — SELECTED WORK</p>
+          <h2>Projects that <em>move.</em></h2>
+        </div>
+        <p class="section-note">A selection of edits. More coming soon.</p>
+      </div>
+
+      <div class="filters" id="filters"></div>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-heading">
+        <p class="eyebrow">02 — ABOUT</p>
+        <h2>Editing isn't just cutting clips.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-number">OD<span>.</span></div>
+        <div>
+          <p class="large-copy">
+            I focus on <strong>pacing, retention, sound design, typography
+            and visual rhythm</strong> to turn ordinary footage into short-form
+            content that feels intentional.
+          </p>
+          <p class="muted">
+            Whether it's real estate, personal branding, commercial content
+            or social media, the goal stays the same: make every second count.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="section-heading">
+        <p class="eyebrow">03 — SERVICES</p>
+        <h2>What I can <em>edit.</em></h2>
+      </div>
+      <div class="services">
+        <article><span>01</span><h3>Reels Editing</h3><p>Short-form videos built around pacing, hooks and retention.</p></article>
+        <article><span>02</span><h3>Motion Graphics</h3><p>Dynamic typography, visual effects and clean animations.</p></article>
+        <article><span>03</span><h3>Real Estate</h3><p>Sharp property edits designed for social media and marketing.</p></article>
+        <article><span>04</span><h3>Social Content</h3><p>Consistent content systems for creators and brands.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">04 — CONTACT</p>
+      <h2>Have a project<br><em>in mind?</em></h2>
+      <a class="contact-email" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+      <div class="socials">
+        <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">Instagram ↗</a>
+        <a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noreferrer">WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Omar Diaa</span>
+    <span>Video Editor</span>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <button class="modal-close" id="modalClose">×</button>
+    <video id="modalVideo" controls playsinline></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
